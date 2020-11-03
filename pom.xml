@@ -21,9 +21,20 @@
 		<sonar.login>7195272b8f910c0c98cf8c69a60bf30e238e2d61</sonar.login>
 		<sonar.projectKey>XigniteX666_demo-service</sonar.projectKey>
 		<pmd.version>6.20.0</pmd.version>
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
 	</properties>
 
 	<dependencies>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>

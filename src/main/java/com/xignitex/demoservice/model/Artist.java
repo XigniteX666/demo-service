@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import java.util.List;
 
 @Data
-public class Artitst {
+public class Artist {
 
     @Id
     private String id;
