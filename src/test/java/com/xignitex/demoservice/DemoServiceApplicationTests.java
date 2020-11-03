@@ -3,6 +3,7 @@ package com.xignitex.demoservice;
 import com.xignitex.demoservice.gateway.artistgateway.ArtistRepository;
 import com.xignitex.demoservice.model.Artist;
 import com.xignitex.demoservice.usecase.GetArtist;
+import com.xignitex.demoservice.utils.ArtistUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -28,15 +29,12 @@ class DemoServiceApplicationTests {
 	@Test
 	void shouldGetArtist() {
 		final String id = "123";
-
-		Artist test_artist = new Artist();
-		test_artist.setName("test");
+		Artist test_artist = ArtistUtils.createTestArtist();
 
 		when(artistRepository.findById(eq(id)))
 				.thenReturn(Optional.of(test_artist));
 
 		Artist artist = getArtist.execute(id);
-		assertThat(artist.getName()).isEqualTo("test");
+		assertThat(artist.getName()).isEqualTo(test_artist.getName());
 	}
-
 }
