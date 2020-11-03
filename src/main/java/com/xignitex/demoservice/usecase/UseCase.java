@@ -1,6 +1,6 @@
 package com.xignitex.demoservice.usecase;
 
 @FunctionalInterface
-public interface UseCase <requestType, responseType>{
-    responseType execute(requestType request);
+public interface UseCase <Q, S>{
+    S execute(Q request);
 }
