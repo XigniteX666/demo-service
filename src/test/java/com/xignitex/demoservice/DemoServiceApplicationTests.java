@@ -20,7 +20,7 @@ class DemoServiceApplicationTests {
 
 		final String id = "123";
 		Artist artist = getArtist.execute(id);
-		assertThat(artist.getName()).isEqualTo("test1");
+		assertThat(artist.getName()).isEqualTo("test");
 	}
 
 }
