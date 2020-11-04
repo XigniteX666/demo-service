@@ -6,25 +6,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 @RequiredArgsConstructor
-public class GetArtist implements UseCase<String, Artist> {
+public class CreateArtist implements UseCase<Artist, Artist>{
 
     @Autowired
     private ArtistRepository artistRepository;
 
     @Override
-    public Artist execute(String request) {
-
-        Optional<Artist> artist = artistRepository.findById(request);
-        if(artist.isPresent()){
-            return artist.get();
-        }else{
-            return null;
-
-        }
-
+    public Artist execute(Artist artist) {
+        return artistRepository.save(artist);
     }
 }
