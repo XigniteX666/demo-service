@@ -1,14 +1,12 @@
 package com.xignitex.demoservice.gateway.controller;
 
 import com.xignitex.demoservice.exception.NotFoundException;
-import com.xignitex.demoservice.gateway.artistgateway.ArtistRepository;
 import com.xignitex.demoservice.model.Artist;
 import com.xignitex.demoservice.usecase.UseCase;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
