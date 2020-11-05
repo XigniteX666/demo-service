@@ -26,7 +26,7 @@ import static org.springframework.http.HttpMethod.*;
 import static org.springframework.http.HttpStatus.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ArtistControllerTest {
+class ArtistControllerTest {
 
     @Autowired
     private TestRestTemplate testRestTemplate;

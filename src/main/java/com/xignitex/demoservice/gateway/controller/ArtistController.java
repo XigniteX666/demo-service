@@ -28,8 +28,9 @@ public class ArtistController {
     })
     @GetMapping(value = "/{id}")
     public Artist getArtistById(@PathVariable("id") final String id) {
-        if(getArtist.execute(id) != null) {
-            return getArtist.execute(id);
+        Artist artist = getArtist.execute(id);
+        if(artist != null) {
+            return artist;
         }else{
             throw new NotFoundException();
 
