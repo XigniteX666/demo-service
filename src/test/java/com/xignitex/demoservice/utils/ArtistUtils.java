@@ -10,7 +10,7 @@ public class ArtistUtils {
     public static Artist createTestArtist(){
         Artist artist = new Artist();
         artist.setName("David Bowie");
-
+        artist.setId("avs232sda");
         return artist;
     }
 
